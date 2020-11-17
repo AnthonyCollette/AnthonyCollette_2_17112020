@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia</title>
+    <link href="/fontawesome-free-5.15.1-web/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
+
+    <!--Header-->
     <header>
-        <a href="index.html"><img src="img/logo/Reservia@3x.png" class="logo" alt="logo"></a>
+        <a href="index.html"><img src="img/logo/Reservia@3x.png" class="logo" alt="logo Reservia"></a>
         <nav>
             <ul>
                 <li><a href="index.html" id="active">Hébergements</a></li>
@@ -20,11 +25,56 @@
         </nav>
     </header>
 
-    <section class="recherche">
+    <!--Recherche-->
+    <section class="section-recherche">
         <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
         <p>En plein centre ville ou en pleine nature</p>
+        <div class="champderecherche">
+            <div class="map-icon-container">
+                <i class="fas fa-map-marker-alt fa-lg"></i>
+            </div>
+            <form action="#">
+                <input type="text" id="recherche" value="Marseille, France">
+                <input type="button" id="submit" value="Rechercher">
+            </form>
+        </div>
+
+        <div class="filtres">
+            <p>Filtres</p>
+            <div class="filter">
+                <div class="icon">
+                    <i class="fas fa-money-bill-wave filter-icon"></i>
+                </div>
+                <a href="#">Économique</a>
+            </div>
+            <div class="filter">
+                <div class="icon">
+                    <i class="fas fa-child filter-icon"></i>
+                </div>
+                <a href="#">Familial</a>
+            </div>
+            <div class="filter">
+                <div class="icon">
+                    <i class="fas fa-heart filter-icon"></i>
+                </div>
+                <a href="#">Romantique</a>
+            </div>
+            <div class="filter">
+                <div class="icon">
+                    <i class="fas fa-dog filter-icon"></i>
+                </div>
+                <a href="#">Animaux autorisés</a>
+            </div>
+        </div>
+        <div class="information">
+            <div class="container-info-icon">
+                <i class="fas fa-info info-icon"></i>
+            </div>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
     </section>
 
+    <!--Hébergements-->
     <section class="hebergements">
 
     </section>
@@ -34,6 +84,7 @@
     </section>
 
     <footer></footer>
+    <script src="https://kit.fontawesome.com/1faaa76d45.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
