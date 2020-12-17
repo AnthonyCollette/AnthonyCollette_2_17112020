@@ -1,0 +1,883 @@
+/* Général */
+
+html {
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+:hover {
+    transition-duration: 0.5s;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.section-recherche, .first-bloc, #activites {
+    padding: 0 2%;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 2% 2% 2%;
+}
+
+.mobile-nav-wrapper {
+    display: none;
+}
+
+.desktop-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.brand {
+    padding-top: 2%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 25% 10% 0 10%;
+}
+
+nav ul li:hover a, .active a {
+    color: #0065FC;
+}
+
+nav ul li:hover, .active {
+    border-top: solid 2px #0065FC;
+    transition-duration: 0s;
+}
+
+.inscription {
+    color: #0065FC;
+    font-weight: 800;
+}
+
+/* Recherche */
+
+input::placeholder {
+    color: black;
+    font-family: "Raleway", sans-serif;
+}
+
+.btn-text {
+    font-family: "Raleway", sans-serif;
+}
+
+.loupe-icon {
+    display: none;
+}
+
+.section-recherche p {
+    font-size: 1em;
+}
+
+.section-recherche h2, .aside h2 {
+    font-weight: 800;
+    font-size: 1.3em;
+
+}
+
+.champderecherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.map-icon-container {
+    background-color: #F2F2F2;
+    height: 50px;
+    width: 50px;
+    border-radius: 30% 0% 0% 30%;
+    line-height: 50px;
+    text-align: center;
+}
+
+.recherche {
+    height: 46px;
+    width: 234px;
+    border: 1px solid #F2F2F2;
+    padding-left: 15px;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.submit {
+    height: 50px;
+    background-color: #0065FC;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    color: white;
+    font-size: 1em;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.filtres p {
+    font-size: 1.1em;
+    font-weight: 800;
+    margin-right: 2%;
+}
+
+.filtres {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    align-items: baseline;
+}
+
+.filtres .filter {
+    position: relative;
+    margin-left: 2%;
+}
+
+.filtres .filter a {
+    padding: 10px 20px 10px 45px;
+    border-radius: 50px;
+    border: 2px solid #F2F2F2;
+    font-size: 1em;
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+}
+
+.filter:hover a {
+    color: #0065FC;
+    border-color: #0065FC;
+}
+
+.section-recherche .filter .filter-icon {
+    padding: 15px;
+    color: #0065FC;
+}
+
+.section-recherche .filter:hover .filter-icon {
+    color: #F2F2F2;
+    background-color: #0065FC;
+    border-radius: 50%;
+    transition-duration: 0s;
+}
+
+.section-recherche .filter:hover a {
+    color: #0065FC;
+    border-color: #0065FC;
+}
+
+.icon {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 0;
+    top: -10px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 1%;
+}
+
+.information p {
+    margin-left: 1%;
+    margin-bottom: 0;
+}
+
+.container-info-icon {
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information .info-icon {
+    color: #0065FC;
+}
+
+/* Hébergements */
+
+.first-bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+#hebergements h2, #activites h2, .aside h2 {
+    font-weight: 800;
+    font-size: 1.3em;
+    padding: 2vh 0;
+}
+
+#hebergements {
+    padding: 0 2% 2% 2%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    width: 70%;  
+}
+
+#hebergements .resultats {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.hebergement-result {
+    width: 30%;
+    height: 45%;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.hebergement-result:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.text-result h3 {
+    font-size: 1em;
+    margin: 2% 0 1% 0;
+}
+
+.note-hebergements {
+    position: absolute;
+    width: 150px;
+    height: 15px;
+    bottom: 10px;
+    left: 14px;
+    display: flex;
+}
+
+.image-resultat {
+    width: 98%;
+    height: 15vh;
+    border-radius: 20px 20px 0 0;
+    margin: 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hebergement-img-1 {
+    background-image: url(../img/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+}
+
+.hebergement-img-2 {
+    background-image: url(../img/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+    background-position: 0px -30px;
+}
+
+.hebergement-img-3 {
+    background-image: url(../img/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+    background-position: 0px -20px;
+}
+
+.hebergement-img-4 {
+    background-image: url(../img/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+    background-position: 0px -50px;
+
+}
+
+.hebergement-img-5 {
+    background-image: url(../img/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+}
+
+.hebergement-img-6 {
+    background-image: url(../img/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+    background-position: 0px -120px;
+}
+
+.afficher-plus {
+    font-weight: bold;
+}
+
+.text-result p {
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+}
+
+.tarif {
+    font-weight: 700;
+}
+
+.text-result {
+    padding-left: 4%;
+    padding-bottom: 4%;
+}
+
+.filled {
+    color: #0065FC;
+}
+
+.empty {
+    color: #F2F2F2;
+}
+
+/* Aside */
+
+.aside {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 0 2%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aside-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.aside-result {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 10%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.aside-result:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.note-aside {
+    position: absolute;
+    width: 150px;
+    height: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+
+}
+
+.text-aside {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    width: 50%;
+}
+
+.text-aside h3 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 10%;
+    max-width: 80%;
+}
+
+.text-aside p {
+    font-size: 0.9em;
+}
+
+.image-aside {
+    width: 200px;
+    height: 150px;
+    border-radius: 20px 0 0 20px;
+    margin: 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aside-img-1 {
+    background-image: url(../img/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+}
+
+.aside-img-2 {
+    background-image: url(../img/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+}
+
+.aside-img-3 {
+    background-image: url(../img/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+}
+
+/* Activités */
+
+#activites {
+    margin: 5% auto;
+}
+
+#activites h3 {
+    margin: 4%
+}
+
+.resultats-activites {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 450px;
+    width: 100%;
+}
+
+.activites-img-1, .activites-img-2, .activites-img-3, .activites-img-4, .activites-img-5, .activites-img-6 {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 15vw;
+}
+
+.activites-img-2 {
+    height: 235px;
+}
+
+.activites-img-3 {
+    height: 165px;
+}
+
+.activites-img-1, .activites-img-4 {
+    height: 100%;
+}
+
+.activites-img-5, .activites-img-6 {
+    height: 195px;
+}
+
+.activites-img-1-bg, .activites-img-2-bg, .activites-img-3-bg, .activites-img-4-bg, .activites-img-5-bg, .activites-img-6-bg {
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+}
+
+.activites-img-1-bg {
+    height: 390px;
+    background-image: url(../img/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+}
+
+.activites-img-2-bg {
+    height: 180px;
+    background-image: url(../img/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+}
+
+.activites-img-3-bg {
+    height: 100px;
+    background-image: url(../img/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+}
+
+.activites-img-4-bg {
+    height: 390px;
+    background-image: url(../img/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+    filter: brightness(1.40);
+}
+
+.activites-img-5-bg {
+    height: 140px;
+    background-image: url(../img/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+}
+
+.activites-img-6-bg {
+    height: 140px;
+    background-image: url(../img/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+}
+
+.activites-img-1:hover, .activites-img-2:hover, .activites-img-3:hover, .activites-img-4:hover, .activites-img-5:hover, .activites-img-6:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+
+footer {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 3%;
+    position: relative;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul li {
+    margin-bottom: 4%;
+}
+
+.nos-hebergements {
+    margin: 0 15%;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+    /* Mobile General */
+
+    /* Mobile Header */
+
+    header {
+        position: relative;
+        padding: 0;
+    }
+    
+    .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 96vw;
+        margin-top: 10%;
+    }
+
+    .desktop-nav-wrapper {
+        display: none;
+    }
+
+    .mobile-nav-wrapper {
+        display: block;
+    }
+
+    .mobile-nav ul {
+        display: flex;
+    }
+
+    .mobile-nav ul li {
+        padding: 28%;
+    }
+
+    .active {
+        border-bottom: solid 2px #0065FC;
+        transition-duration: 0s;
+        border-top: transparent;
+    }
+
+    .activite {
+        border-bottom: #F2F2F2 solid 2px;
+    }
+
+    .inscription {
+        color: black;
+    }
+
+    .active, .activite {
+        margin-top: 5%;
+        border-top: transparent;
+    }
+
+    /* Mobile Recherche */
+
+    .section-recherche {
+        padding-left: 4%;
+    }
+
+    .section-recherche h2 {
+        margin-top: 20%;
+        margin-bottom: 5%;
+        max-width: 80%;
+    }
+
+    .btn-text {
+        display: none;
+    }
+    
+    .loupe-icon {
+        display: block;
+    }
+
+    .recherche {
+        max-width: 65%;
+    }
+
+    .form {
+        position: relative;
+    }
+
+    .submit {
+        border-radius: 15px;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        right: 15%;
+    }
+
+    .information {
+        max-width: 90%;
+        margin-bottom: 10%;
+    }
+
+    .container-info-icon {
+        width: 35px;
+    }
+
+    .section-recherche .filtres p {
+        margin-right: 100%;
+    }
+
+    .section-recherche .filtres .filter {
+        margin: 5% 3% 5% 0;
+    }
+
+    /* Mobile Hebergements */
+
+    .first-bloc {
+        padding: 0;
+        width: 100%;
+    }
+
+    #hebergements h2, #activites h2, .afficher-plus {
+        padding-left: 5%;
+    }
+
+    #hebergements {
+        order: 2;
+        background-color: #FFFFFF;
+        border-radius: 0px;
+        padding-left: 0;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .hebergement-result {
+        width: 90vw;
+        margin: 0 auto 8% auto;
+    }
+
+    .image-resultat {
+        width: 98%;
+        height: 115px;
+    }
+
+    /* Mobile Aside */
+
+    .aside {
+        order: 1;
+        border-radius: 0px;
+        width: 100%;
+        padding: 10% 0;
+        }
+
+    .aside-result {
+        height: 145px;
+        width: 335px;
+        margin: 0 auto 15px auto;
+        position: relative;
+    }
+
+    .aside-title {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80vw;
+    }
+
+    .image-aside {
+        width: 160px;
+        height: 96%;
+    }
+
+    /* Mobile Activités */
+
+    .resultats-activites {
+        height: auto;
+        width: 340px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+
+    .resultats-activites a {
+        margin-bottom: 8%;
+    }
+
+    .activites-img-1-bg, .activites-img-2-bg, .activites-img-3-bg, .activites-img-4-bg, .activites-img-5-bg, .activites-img-6-bg {
+        width: 340px;
+        height: 75%;
+    }
+
+    .activites-img-1, .activites-img-2, .activites-img-3, .activites-img-4, .activites-img-5, .activites-img-6 {
+        width: 340px;
+        height: 190px;
+    }
+
+
+    .fort-de-pomegues-bg {
+            background-position: -10px -175px;
+    }
+
+    .iles-du-frioul-bg {
+            background-position-y: -20px;
+    }
+
+    .notre-dame-de-la-garde-bg {
+            background-position: 0 -10px;
+    }
+
+    .parc-longchamp-bg {
+            background-position: 0 -40px;
+    }
+
+    /* Mobile Footer */
+
+    footer {
+        flex-direction: column;
+        padding: 6%;
+        margin-top: 6%;
+    }
+
+    footer h3 {
+        margin-top: 0;
+    }
+
+    .nos-hebergements {
+        margin: 15% 0;
+    }
+}
+
+/* Tablets */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+    /* Tablets General */
+
+    body {
+        width: 100vw;
+    }
+
+    /* Tablets Header */
+
+    header {
+        padding: 0 2% 2% 2%;
+    }
+
+    nav {
+        margin-right: 15%;
+    }
+
+    nav ul li {
+        padding-top: 15%;
+    }
+
+    /* Tablets Recherche */
+
+    .section-recherche {
+        padding-left: 2%;
+    }
+
+    .filter:last-child {
+        margin-top: 4%;
+    }
+
+    .information {
+        margin-top: 3%;
+    }
+
+    /* Tablets Hebergements */
+
+    .first-bloc {
+        padding: 0 2%;
+        width: 100vw;
+    }
+
+    #hebergements {
+        width: 100vw;
+    }
+
+    #hebergements .resultats {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .image-resultat {
+        height: 10vh;
+    }
+
+    .note-hebergements {
+        bottom: 5px;
+        left: 8px;
+    }
+
+    /* Tablets Aside */
+
+    .aside {
+        width: 100vw;
+        margin-top: 5%;
+    }
+
+    .aside-result {
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .image-aside {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .text-aside {
+        width: 100%;
+    }
+
+    .text-aside p {
+        margin-bottom: 15%;
+    }
+
+    .aside-results-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Tablets Activités */
+
+    #activites {
+        padding-left: 2%;
+    }
+
+    #activites a {
+        margin: 1%;
+    }
+
+    .resultats-activites {
+        justify-content: space-around;
+    }
+
+    .activites-img-1, .activites-img-2, .activites-img-3, .activites-img-4, .activites-img-5, .activites-img-6 {
+        width: 20vw;
+    }
+
+    /* Tablets Footer */
+
+    .nos-hebergements {
+        margin: 0 20%;
+    }
+}
+
+    /* Tablets Footer */
