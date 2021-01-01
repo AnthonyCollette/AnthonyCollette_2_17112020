@@ -752,6 +752,7 @@ footer ul li {
         height: auto;
         width: 340px;
         padding-bottom: 30px;
+        margin: 0 auto;
     }
 
     .resultats-activites a:nth-child(1n + 1) {
