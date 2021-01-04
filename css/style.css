@@ -38,28 +38,13 @@ main {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 0 2% 2% 2%;
-}
-
-.mobile-nav-wrapper {
-    display: none;
-}
-
-.desktop-nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.brand {
-    padding-top: 2%;
 }
 
 nav {
     display: flex;
     align-items: center;
-    margin-right: 10%;
 }
 
 nav ul {
@@ -68,8 +53,9 @@ nav ul {
 }
 
 nav ul li {
-    padding: 25% 10% 0 10%;
+    padding: 50px 30px;
     border-top: solid 2px transparent;
+    text-align: center;
 }
 
 nav ul li:hover a {
@@ -257,7 +243,7 @@ aside h2 {
     padding: 40px;
     background-color: #f2f2f2;
     border-radius: 20px;
-    width: 800px;
+    max-width: 800px;
 }
 
 #hebergements .resultats {
@@ -292,7 +278,7 @@ aside h2 {
     width: 240px;
     height: 115px;
     border-radius: 20px 20px 0 0;
-    margin: 1% auto;
+    margin: 5px auto;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -331,7 +317,7 @@ aside h2 {
 }
 
 .text-result {
-    padding: 10px 15px 15px 15px;
+    padding: 5px 15px 15px 15px;
 }
 
 .filled {
@@ -587,30 +573,54 @@ footer ul li {
     header {
         position: relative;
         padding: 0;
+        width: 100%;
     }
 
     .brand {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 96vw;
-        margin-top: 10%;
+        position: absolute;
+        left: 6%;
+        top: 30px;
     }
 
-    .desktop-nav-wrapper {
-        display: none;
+    nav ul {
+        flex-wrap: wrap;
     }
 
-    .mobile-nav-wrapper {
-        display: block;
+    nav ul li {
+        padding: 45px 0 15px 0;
     }
 
-    .mobile-nav ul {
-        display: flex;
+    nav ul li:nth-child(1),
+    nav ul li:nth-child(2) {
+        width: 30vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        border-bottom: solid 2px #f2f2f2;
     }
 
-    .mobile-nav ul li {
-        padding: 28%;
+    .inscription:active,
+    nav ul li:nth-child(1):active,
+    nav ul li:nth-child(2):active {
+        border-bottom: solid 2px #0065fc;
+    }
+
+    .inscription:hover,
+    nav ul li:nth-child(1):hover,
+    nav ul li:nth-child(2):hover {
+        border-bottom: solid 2px #0065fc;
+        border-top: none;
+    }
+
+    .inscription {
+        order: -1;
+        padding-left: 74vw;
+    }
+
+    .inscription a {
+        color: #0065fc;
     }
 
     .active {
@@ -621,10 +631,6 @@ footer ul li {
 
     .activite {
         border-bottom: #f2f2f2 solid 2px;
-    }
-
-    .inscription {
-        color: black;
     }
 
     .active,
@@ -691,7 +697,6 @@ footer ul li {
 
     .first-bloc {
         padding: 0;
-        width: 100%;
     }
 
     #hebergements h2,
@@ -707,16 +712,22 @@ footer ul li {
         padding-left: 0;
         width: 100%;
         padding: 0px;
+        margin: 40px auto;
     }
 
     .hebergement-result {
-        width: 90vw;
-        margin: 0 auto 8% auto;
+        width: 335px;
+        margin: 0 auto 10px auto;
     }
 
     .image-resultat {
-        width: 98%;
+        width: calc(100% - 10px);
         height: 115px;
+        margin-top: 5px;
+    }
+
+    .text-result {
+        padding-top: 5px;
     }
 
     /* ------------------------------------------------------------------ MOBILE ASIDE ------------------------------------------------------------------ */
@@ -742,8 +753,8 @@ footer ul li {
     }
 
     .image-aside {
-        width: 160px;
-        height: 96%;
+        width: 130px;
+        height: 135px;
     }
 
     /* ------------------------------------------------------------------ MOBILE ACTIVITES ------------------------------------------------------------------ */
@@ -799,9 +810,12 @@ footer ul li {
     /* ------------------------------------------------------------------ MOBILE FOOTER ------------------------------------------------------------------ */
 
     footer {
-        flex-direction: column;
         padding: 6%;
         margin-top: 6%;
+    }
+
+    .footer-content {
+        flex-direction: column;
     }
 
     footer h3 {
@@ -826,14 +840,11 @@ footer ul li {
 
     header {
         padding: 0 2% 2% 2%;
-    }
-
-    nav {
-        margin-right: 15%;
+        align-items: center;
     }
 
     nav ul li {
-        padding-top: 15%;
+        padding-top: 50px;
     }
 
     /* ------------------------------------------------------------------ TABLETS RECHERCHE ------------------------------------------------------------------ */
@@ -854,55 +865,64 @@ footer ul li {
 
     .first-bloc {
         padding: 0 2%;
-        width: 100vw;
+        flex-direction: column;
     }
 
     #hebergements {
-        width: 100vw;
+        min-width: fit-content;
     }
 
     #hebergements .resultats {
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-around;
+    }
+
+    .hebergement-result {
+        box-sizing: content-box;
+        width: 30%;
     }
 
     .image-resultat {
-        height: 10vh;
+        height: 115px;
+        width: calc(100% - 10px);
     }
 
     .note-hebergements {
-        bottom: 5px;
-        left: 8px;
+        bottom: 8px;
+        left: 15px;
+    }
+
+    .text-result {
+        padding-top: 5px;
     }
 
     /* ------------------------------------------------------------------ TABLETS ASIDE ------------------------------------------------------------------ */
 
     aside {
-        width: 100vw;
         margin-top: 5%;
-    }
-
-    .aside-result {
-        width: 30%;
-        flex-direction: column;
-    }
-
-    .image-aside {
-        border-radius: 20px 20px 0 0;
+        min-width: fit-content;
     }
 
     .text-aside {
         width: 100%;
-    }
-
-    .text-aside p {
-        margin-bottom: 15%;
+        padding: 5px 10px;
     }
 
     .aside-results-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .aside-result {
+        width: calc(33% - 20px);
+        height: 175px;
+        margin-bottom: 0;
+    }
+
+    .image-aside {
+        width: 260px;
+        height: 165px;
     }
 
     /* ------------------------------------------------------------------ TABLETS ACTIVITES ------------------------------------------------------------------ */
@@ -929,6 +949,10 @@ footer ul li {
     }
 
     /* ------------------------------------------------------------------ TABLETS FOOTER ------------------------------------------------------------------ */
+
+    .footer-content {
+        padding: 0 2%;
+    }
 
     .nos-hebergements {
         margin: 0 20%;
