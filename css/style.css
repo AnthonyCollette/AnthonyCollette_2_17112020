@@ -67,7 +67,7 @@ nav ul li:hover {
     transition-duration: 0s;
 }
 
-.inscription {
+.inscription a {
     color: #0065fc;
     font-weight: 800;
 }
@@ -87,8 +87,16 @@ input::placeholder {
     display: none;
 }
 
-.section-recherche p {
+.section-recherche h3 {
     font-size: 1em;
+    font-weight: 300;
+}
+
+.search-field-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
 .section-recherche h2,
@@ -99,8 +107,7 @@ aside h2 {
 
 .champderecherche {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     margin-top: 20px;
 }
 
@@ -133,7 +140,7 @@ aside h2 {
     cursor: pointer;
 }
 
-.filtres p {
+.filtres h4 {
     font-size: 1.1em;
     font-weight: 800;
     margin-right: 2%;
@@ -204,7 +211,7 @@ aside h2 {
     margin-top: 1%;
 }
 
-.information p {
+.information h3 {
     margin-left: 1%;
     margin-bottom: 0;
 }
@@ -258,7 +265,7 @@ aside h2 {
     height: 200px;
     background-color: white;
     border-radius: 20px;
-    margin-bottom: 3%;
+    margin: 8px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -420,6 +427,7 @@ aside h2 {
 
 #activites {
     margin: 5% auto;
+    padding-left: 0;
 }
 
 #activites h3 {
@@ -428,43 +436,21 @@ aside h2 {
 
 .resultats-activites {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    height: 455px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 .resultats-activites a {
-    max-width: 300px;
-    min-width: 300px;
+    width: 300px;
 }
 
-.resultats-activites a:nth-child(1),
-.resultats-activites a:nth-child(4) {
-    height: 445px;
+.resultats-activites > a,
+.resultats-activites > div {
+    height: 450px;
+    margin: 10px;
 }
 
-.resultats-activites a:nth-child(2) {
-    height: 235px;
-}
-
-.resultats-activites a:nth-child(3) {
-    height: 165px;
-}
-
-.resultats-activites a:nth-child(5) {
-    height: 195px;
-}
-
-.resultats-activites a:nth-child(6) {
-    height: 210px;
-}
-
-.activites-img-1,
-.activites-img-2,
-.activites-img-3,
-.activites-img-4,
-.activites-img-5,
-.activites-img-6 {
+.activites-style {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
@@ -487,16 +473,18 @@ aside h2 {
     height: 195px;
 }
 
-.activites-img-1-bg,
-.activites-img-2-bg,
-.activites-img-3-bg,
-.activites-img-4-bg,
-.activites-img-5-bg,
-.activites-img-6-bg {
+.flex-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activites-bg {
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;
     background-size: cover;
     height: calc(100% - 50px);
+    overflow: hidden;
 }
 
 .activites-img-1-bg {
@@ -505,6 +493,7 @@ aside h2 {
 
 .activites-img-2-bg {
     background-image: url(../img/activites/4_small/image2.jpg);
+    background-position: 0 -100px;
 }
 
 .activites-img-3-bg {
@@ -514,6 +503,7 @@ aside h2 {
 .activites-img-4-bg {
     background-image: url(../img/activites/4_small/image4.jpg);
     filter: brightness(1.4);
+    background-position: -140px 0;
 }
 
 .activites-img-5-bg {
@@ -524,12 +514,7 @@ aside h2 {
     background-image: url(../img/activites/4_small/image6.jpg);
 }
 
-.activites-img-1:hover,
-.activites-img-2:hover,
-.activites-img-3:hover,
-.activites-img-4:hover,
-.activites-img-5:hover,
-.activites-img-6:hover {
+.activites-style:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -538,7 +523,6 @@ aside h2 {
 footer {
     background-color: #f2f2f2;
     padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .footer-content {
@@ -547,6 +531,10 @@ footer {
     justify-content: flex-start;
     max-width: 1340px;
     margin: 0 auto;
+}
+
+.footer-content > div {
+    margin-bottom: 50px;
 }
 
 footer ul {
@@ -561,6 +549,132 @@ footer ul li {
 
 .nos-hebergements {
     margin: 0 15%;
+}
+
+/* ------------------------------------------------------------------ TABLETS ------------------------------------------------------------------ */
+
+@media (max-width: 1439px) {
+    /* ------------------------------------------------------------------ TABLETS GENERAL ------------------------------------------------------------------ */
+
+    /* ------------------------------------------------------------------ TABLETS HEADER ------------------------------------------------------------------ */
+
+    header {
+        padding: 0 2% 2% 2%;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding-top: 50px;
+    }
+
+    /* ------------------------------------------------------------------ TABLETS RECHERCHE ------------------------------------------------------------------ */
+
+    .section-recherche {
+        padding-left: 2%;
+    }
+
+    .filter:last-child {
+        margin-top: 4%;
+    }
+
+    .information {
+        margin-top: 3%;
+    }
+
+    .information h3 {
+        margin-left: 10px;
+    }
+
+    /* ------------------------------------------------------------------ TABLETS HEBERGEMENTS ------------------------------------------------------------------ */
+
+    .first-bloc {
+        padding: 0 2%;
+        flex-direction: column;
+    }
+
+    #hebergements {
+        min-width: fit-content;
+        min-width: -moz-fit-content;
+    }
+
+    #hebergements .resultats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hebergement-result {
+        box-sizing: content-box;
+    }
+
+    .image-resultat {
+        height: 115px;
+        width: calc(100% - 10px);
+    }
+
+    .note-hebergements {
+        bottom: 8px;
+        left: 15px;
+    }
+
+    .text-result {
+        padding-top: 5px;
+    }
+
+    /* ------------------------------------------------------------------ TABLETS ASIDE ------------------------------------------------------------------ */
+
+    aside {
+        margin-bottom: 5%;
+        min-width: fit-content;
+        min-width: -moz-fit-content;
+        order: -1;
+    }
+
+    .text-aside {
+        width: 50%;
+        padding: 5px 10px;
+    }
+
+    .aside-results-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .aside-result {
+        width: 350px;
+        height: 175px;
+        margin: 10px;
+    }
+
+    .image-aside {
+        width: 260px;
+        height: 165px;
+    }
+
+    /* ------------------------------------------------------------------ TABLETS ACTIVITES ------------------------------------------------------------------ */
+
+    #activites {
+        padding-left: 2%;
+    }
+
+    .resultats-activites a {
+        min-width: 200px;
+    }
+
+    .resultats-activites > a,
+    .resultats-activites > div {
+        min-width: 300px;
+    }
+
+    /* ------------------------------------------------------------------ TABLETS FOOTER ------------------------------------------------------------------ */
+
+    .footer-content {
+        padding: 0 2%;
+    }
+
+    .nos-hebergements {
+        margin: 0 20%;
+    }
 }
 
 /* ------------------------------------------------------------------ MOBILE ------------------------------------------------------------------ */
@@ -587,6 +701,7 @@ footer ul li {
 
     nav ul {
         flex-wrap: wrap;
+        width: 100vw;
     }
 
     nav ul li {
@@ -595,9 +710,7 @@ footer ul li {
 
     nav ul li:nth-child(1),
     nav ul li:nth-child(2) {
-        width: 30vw;
-        padding-left: 10vw;
-        padding-right: 10vw;
+        width: 50%;
         border-bottom: solid 2px #f2f2f2;
     }
 
@@ -616,7 +729,10 @@ footer ul li {
 
     .inscription {
         order: -1;
-        padding-left: 74vw;
+        margin-left: 50%;
+        width: 10%;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 
     .inscription a {
@@ -646,7 +762,7 @@ footer ul li {
     }
 
     .section-recherche h2 {
-        margin-top: 20%;
+        margin-top: 10%;
         margin-bottom: 5%;
         max-width: 80%;
     }
@@ -678,15 +794,12 @@ footer ul li {
 
     .information {
         max-width: 90%;
-        margin-bottom: 10%;
+        margin-bottom: 20px;
     }
 
     .container-info-icon {
-        width: 35px;
-    }
-
-    .section-recherche .filtres p {
-        margin-right: 100%;
+        width: 25px;
+        height: 25px;
     }
 
     .section-recherche .filtres .filter {
@@ -716,8 +829,8 @@ footer ul li {
     }
 
     .hebergement-result {
-        width: 335px;
-        margin: 0 auto 10px auto;
+        max-width: 335px;
+        min-width: 280px;
     }
 
     .image-resultat {
@@ -741,7 +854,7 @@ footer ul li {
 
     .aside-result {
         height: 145px;
-        width: 335px;
+        max-width: 290px;
         margin: 0 auto 15px auto;
         position: relative;
     }
@@ -759,11 +872,21 @@ footer ul li {
 
     /* ------------------------------------------------------------------ MOBILE ACTIVITES ------------------------------------------------------------------ */
 
+    #activites {
+        padding-left: 0;
+    }
+
     .resultats-activites {
         height: auto;
-        width: 340px;
+        max-width: 340px;
+        min-width: 280px;
         padding-bottom: 30px;
         margin: 0 auto;
+    }
+
+    .resultats-activites > a,
+    .resultats-activites > div {
+        margin: 10px auto;
     }
 
     .resultats-activites a:nth-child(1n + 1) {
@@ -771,40 +894,22 @@ footer ul li {
         margin: 0 auto 25px auto;
     }
 
-    .activites-img-1-bg,
-    .activites-img-2-bg,
-    .activites-img-3-bg,
-    .activites-img-4-bg,
-    .activites-img-5-bg,
-    .activites-img-6-bg {
+    .activites-bg {
         width: 300px;
         height: 75%;
     }
 
-    .activites-img-1,
-    .activites-img-2,
-    .activites-img-3,
-    .activites-img-4,
-    .activites-img-5,
-    .activites-img-6 {
+    .activites-style {
         width: 300px;
         height: 190px;
     }
 
-    .fort-de-pomegues-bg {
-        background-position: -10px -175px;
+    .activites-img-2-bg {
+        background-position: 0 -130px;
     }
 
-    .iles-du-frioul-bg {
-        background-position-y: -20px;
-    }
-
-    .notre-dame-de-la-garde-bg {
-        background-position: 0 -10px;
-    }
-
-    .parc-longchamp-bg {
-        background-position: 0 -40px;
+    .activites-img-4-bg {
+        background-position: 0 -50px;
     }
 
     /* ------------------------------------------------------------------ MOBILE FOOTER ------------------------------------------------------------------ */
@@ -823,138 +928,6 @@ footer ul li {
     }
 
     .nos-hebergements {
-        margin: 15% 0;
-    }
-}
-
-/* ------------------------------------------------------------------ TABLETS ------------------------------------------------------------------ */
-
-@media (min-width: 768px) and (max-width: 1439px) {
-    /* ------------------------------------------------------------------ TABLETS GENERAL ------------------------------------------------------------------ */
-
-    body {
-        width: 100vw;
-    }
-
-    /* ------------------------------------------------------------------ TABLETS HEADER ------------------------------------------------------------------ */
-
-    header {
-        padding: 0 2% 2% 2%;
-        align-items: center;
-    }
-
-    nav ul li {
-        padding-top: 50px;
-    }
-
-    /* ------------------------------------------------------------------ TABLETS RECHERCHE ------------------------------------------------------------------ */
-
-    .section-recherche {
-        padding-left: 2%;
-    }
-
-    .filter:last-child {
-        margin-top: 4%;
-    }
-
-    .information {
-        margin-top: 3%;
-    }
-
-    /* ------------------------------------------------------------------ TABLETS HEBERGEMENTS ------------------------------------------------------------------ */
-
-    .first-bloc {
-        padding: 0 2%;
-        flex-direction: column;
-    }
-
-    #hebergements {
-        min-width: fit-content;
-    }
-
-    #hebergements .resultats {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .hebergement-result {
-        box-sizing: content-box;
-        width: 30%;
-    }
-
-    .image-resultat {
-        height: 115px;
-        width: calc(100% - 10px);
-    }
-
-    .note-hebergements {
-        bottom: 8px;
-        left: 15px;
-    }
-
-    .text-result {
-        padding-top: 5px;
-    }
-
-    /* ------------------------------------------------------------------ TABLETS ASIDE ------------------------------------------------------------------ */
-
-    aside {
-        margin-top: 5%;
-        min-width: fit-content;
-    }
-
-    .text-aside {
-        width: 100%;
-        padding: 5px 10px;
-    }
-
-    .aside-results-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .aside-result {
-        width: calc(33% - 20px);
-        height: 175px;
-        margin-bottom: 0;
-    }
-
-    .image-aside {
-        width: 260px;
-        height: 165px;
-    }
-
-    /* ------------------------------------------------------------------ TABLETS ACTIVITES ------------------------------------------------------------------ */
-
-    #activites {
-        padding-left: 2%;
-    }
-
-    .resultats-activites {
-        justify-content: space-around;
-    }
-
-    .resultats-activites a {
-        min-width: 200px;
-    }
-
-    .activites-img-1,
-    .activites-img-2,
-    .activites-img-3,
-    .activites-img-4,
-    .activites-img-5,
-    .activites-img-6 {
-        width: 20vw;
-    }
-
-    /* ------------------------------------------------------------------ TABLETS FOOTER ------------------------------------------------------------------ */
-
-    .footer-content {
-        padding: 0 2%;
-    }
-
-    .nos-hebergements {
-        margin: 0 20%;
+        margin-left: 0;
     }
 }
